@@ -11,7 +11,7 @@
 Без аргументов (по умолчанию).
 Возвращает список торговых дней от даты текущей даты с указанной глубиной 10 дней.
 ```
-from moex+trade_dates import func_moex_trade_dates
+from moex_trade_dates import func_moex_trade_dates
 
 print(func_moex_trade_dates())
 ```
@@ -23,7 +23,7 @@ print(func_moex_trade_dates())
 Возвращает список торговых дней от даты ('2021-01-01') с указанной глубиной (5 дней).
 > Обратите внимание, что последняя дата не 2021-01-01, а 2020-12-30, так как 2021-01-01 и 2020-12-31 были не торговыми днями.
 ```
-from moex+trade_dates import func_moex_trade_dates
+from moex_trade_dates import func_moex_trade_dates
 
 print(func_moex_trade_dates('2021-01-01', 5, 1))
 ```
@@ -34,7 +34,7 @@ print(func_moex_trade_dates('2021-01-01', 5, 1))
 Режим **2**:
 Возвращает первый день от даты ('2021-01-01') с указанной глубиной (5 дней).
 ```
-from moex+trade_dates import func_moex_trade_dates
+from moex_trade_dates import func_moex_trade_dates
 
 print('Первый день: '+func_moex_trade_dates('2021-01-01', 5, 2))
 ```
@@ -46,7 +46,7 @@ print('Первый день: '+func_moex_trade_dates('2021-01-01', 5, 2))
 Возвращает первый день и предыдущий день от даты ('2021-01-01') с указанной глубиной (5 дней).
 > Данный режим удобен, когда запрашиваются данные от текущей даты, которая является торговым днем. Например, скачать котировки за предыдущие пять дней.
 ```
-from moex+trade_dates import func_moex_trade_dates
+from moex_trade_dates import func_moex_trade_dates
 
 first_day, previous_day = func_moex_trade_dates('2021-01-01', 5, 3)
 print('Первый день: '+first_day+'\nПредпоследний день: '+ previous_day)
